@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "entrada.h": "c",
+        "string.h": "c",
+        "caca_palavra.h": "c"
+    }
+}
