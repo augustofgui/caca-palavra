@@ -4,31 +4,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "menu.h"
 #include "entrada.h"
 
 #define TEXT 50
 
-
-typedef struct letra {
-	char valor;
-	char cor[TEXT];
-} Letra;
-
-typedef struct palavra {
-	char * id;
-	int cord_l, cord_c;
-} Palavra;
-
 typedef struct caca_palavra {
-	Letra ** tabuleiro;
+	char *** tabuleiro;
 	int tam_l, tam_c;
-    int nro_palavras;
-    Palavra * palavras;
+	int nro_palavras;
+	char ** palavras;
+	int ** cord_palavras;
 } Caca_palavra;
 
 void jogo();
 void inicia_novo_jogo();
 int le_dicionario();
-
+Caca_palavra novo_caca_palavra(int tam_l, int tam_c, int nro_palavras);
 #endif //CACA-PALAVRA_H
